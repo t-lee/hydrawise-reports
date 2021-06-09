@@ -1,0 +1,20 @@
+{
+    "hydrawise": {
+        "controller_id": "123456",
+        "api-payload": {
+            "client_id": "hydrawise_app",
+            "client_secret": "your-client-secret",
+            "password": "your-password",
+            "username": "your-username",
+            "scope": "all",
+            "grant_type": "password"
+        }
+    },
+    "mysql": {
+        "host": "localhost",
+        "user": "mysql-user",
+        "password": "mysql-password",
+        "database": "your-db"
+    }
+}
+
