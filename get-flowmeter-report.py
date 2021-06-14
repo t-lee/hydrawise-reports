@@ -5,20 +5,31 @@ import time
 import subprocess
 import sys
 import requests
+import re
 import mysql.connector
 from mysql.connector import errorcode
 
+MAXZONES = 12
+
 ## TODOs ##
-# - start time of the query should be based on the latest found records in the database instead of static 7 days
 # - more exception handling
 # - logging
 # - improve read of json config files
+# - into config: number of past days to query
+# - count number of lines in the table before and after INSERT statements
+# - log report of lines addded to DB and number of metrics found in api response
+# - find out why the POST with python requests fails, while it works with curl
+# - replace print() statements with verbose/warn/error methods and do logging
+# - check for other usefull reports from hydrawise api and maybe implement them
+# - write help function / add argparse
+# - write README.md
+
 
 def get_data(cred):
-
+    ## now
     time_end = int(time.time())
-    ## minus one week
-    time_start = time_end - 604800
+    ## minus 365 days
+    time_start = time_end - 86400*365
 
 
     reports_URL = 'https://app.hydrawise.com/api/v2/reports?format=json&option=3&start=%d000&end=%d000&type=FLOW_METER_MEASUREMENT_TYPE&controller_id=%s' % (time_start, time_end, cred['controller_id'])
@@ -50,26 +61,140 @@ def get_data(cred):
 
 
 def parse_data(data, cred):
-    
-    rc = insert_data( ( 3, 1622952045, 10, 27), cred )
-    rc = insert_data( ( 2, 1622952045, 9, 22 ), cred )
-    rc = insert_data( ( 1, 1622952044, 10, 30 ), cred )
-    rc = insert_data( ( 3, 1622952045, 10, 27 ), cred )
+
+    zone_names = {}
+    if not isinstance(data, list):
+        print('data expected to be a list')
+        return None
+
+    db = connectDB(cred)
+    if not db:
+        return None
+
+    i = 0
+    for zone in data:
+        ###print(zone)
+        i += 1
+        if not isinstance(zone, dict):
+            print('data element %d expected to be a dict' % (i))
+            continue
+
+        ################################################################################
+        ## checking now for presence and validity of zone name and zoneId ##############
+        if not 'name' in zone:
+            print('field "name" expected in dictionary of list element %d' % i)
+            continue
+
+        if not isinstance(zone['name'], str):
+            print('field "name" of data element %d contains no string' % (i))
+            continue
+
+        zoneId = zone['name'].split(sep=':')[0]
+        try:
+            zoneId = int(zoneId)
+        except ValueError as e:
+            print('field "name" of data element %d contains no zone ID in the beginning' % (i))
+            continue
+
+        if zoneId > MAXZONES:
+            print('field "name" of data element %d contains an invalid zone ID "%d". Only %d zones are supported' % (i, zoneId, MAXZONES))
+            continue
+
+        if zoneId in zone_names:
+            if zone_names[zoneId] != zone['name']:
+                print('duplicate zone IDs found for different zones.\n  %s\n  %s' % (zone_names[zoneId], zone['name']))
+                continue
+        else:
+            zone_names[zoneId] = zone['name']
 
 
 
+        #################################################################################
+        ## checking now for presence and validity of data elements ######################
+        if not 'data' in zone:
+            print('field "data" expected in dictionary of zone: "%s"' % zone['name'])
+            continue
 
-def insert_data(data, cred):
+        if not isinstance(zone['data'], list):
+            print('field "data" of data element %d of zone "%s" contains no list' % (i, zone['name']))
+            continue
 
-    add_metric = (
-            "INSERT IGNORE INTO hydrawise_flow_meter "
-            "(zone, metric_timestamp, runtime, litres) "
-            "VALUES (%s, %s, %s, %s) "
-            )
+        j = -1
+        for datapoint in zone['data']:
+            j += 1
+            skip = False
+            for key in ("note", "units", "x", "y"):
+                if not key in datapoint:
+                    print('zone ("{}") / data point ({}):    key "{}" not found. Skipping this data point'.format(zone['name'], j, key))
+                    skip = True
+                    break
 
-    print(add_metric)
-    print(data)
+            if skip:
+                continue
 
+
+            ###########################################
+            ## extract runtime from data point ########
+            if not isinstance(datapoint['note'], str):
+                print('zone ("{}") / data point ({}):    content of key "note" is not a string'.format(zone['name'], j))
+                continue
+
+            runtime = extract_runtime(datapoint['note'])
+            if runtime == None:
+                print('zone ("{}") / data point ({}):    cannot extract the runtime from note: "{}". Will write Null to database.'.format(zone['name'], j, datapoint['note']))
+
+            #######################################
+            ## verify that the unit is litres #####
+            if not isinstance(datapoint['units'], str):
+                print('zone ("{}") / data point ({}):    content of key "units" is not a string'.format(zone['name'], j))
+                continue
+
+            if datapoint['units'] != "litres":
+                print('zone ("{}") / data point ({}):    measured unit is not litres'.format(zone['name'], j))
+                continue
+
+            ################################################
+            ## check that element 'x' is an integer ########
+            if not isinstance(datapoint['x'], int):
+                print('zone ("{}") / data point ({}):    content of key "x" is not an integer'.format(zone['name'], j))
+                continue
+
+            ############################################################################
+            ## 'x' is a unixtimestamp with microseconds, which have to be removed ######
+            x = int(datapoint['x'] / 1000)
+
+            ##############################################
+            ## check that element 'y' is an integer ######
+            if not isinstance(datapoint['y'], int):
+                print('zone ("{}") / data point ({}):    content of key "y" is not an integer'.format(zone['name'], j))
+                continue
+
+            if not insert_data( ( zoneId, x, runtime, datapoint['y'] ), db ):
+                print("failed to write data to database: ({}, {}, {}, {})".format( zoneId, x, runtime, datapoint['y'] ) )
+
+    closeDB(db)
+
+
+def extract_runtime(string):
+    p = re.compile("^Run time: (\d+) Minuten?$")
+    r = p.search(string)
+    if r != None:
+        return(int(r.group(1))*60)
+
+    p = re.compile("^Run time: (\d+) Sekunden?$")
+    r = p.search(string)
+    if r != None:
+        return(int(r.group(1)))
+
+    p = re.compile("^Run time: (\d+) Stunden?$")
+    r = p.search(string)
+    if r != None:
+        return(int(r.group(1))*3600)
+
+    return(None)
+
+
+def connectDB(cred):
     try:
         db = mysql.connector.connect(**cred)
     except mysql.connector.Error as err:
@@ -80,15 +205,39 @@ def insert_data(data, cred):
         else:
             print("failed to connect to database server: %s" % err)
 
-        return(1)
+        return(None)
+    return db
 
-    cursor = db.cursor()
+def closeDB(db):
+    try:
+        db.close()
+    except Exception as e:
+        print(e)
 
-    cursor.execute(add_metric, data)
-    db.commit()
-    cursor.close()
 
-    db.close()
+def insert_data(data, db):
+
+    add_metric = (
+            "INSERT IGNORE INTO hydrawise_flow_meter "
+            "(zone, metric_timestamp, runtime, litres) "
+            "VALUES (%s, %s, %s, %s) "
+            )
+
+    #print(add_metric)
+    #print(data)
+
+    try:
+        cursor = db.cursor()
+        cursor.execute(add_metric, data)
+        db.commit()
+        cursor.close()
+
+        return True
+
+    except Exception as e:
+        print(e)
+        return False
+
 
 
 
@@ -98,17 +247,17 @@ if __name__ == "__main__":
     with open("./test-config.json") as json_file:
         cred = json.load(json_file)
 
-    test = True
     test = False
+    #test = True
 
-    if test:
+    if not test:
         hydrawise_data = get_data(cred['hydrawise'])
     else:
         with open("./test-data.json") as json_file:
             hydrawise_data = json.load(json_file)
 
-    print('\nvvvvvvv Result: vvvvvvv\n')
-    print(json.dumps(hydrawise_data, indent=4, sort_keys=True))
-    print('\n^^^^^^^^^^^^^^^^^^^^^^^\n')
+    #print('\nvvvvvvv Result: vvvvvvv\n')
+    #print(json.dumps(hydrawise_data, indent=4, sort_keys=True))
+    #print('\n^^^^^^^^^^^^^^^^^^^^^^^\n')
 
     parse_data(hydrawise_data, cred['mysql'])
