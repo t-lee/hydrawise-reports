@@ -36,12 +36,12 @@ def get_data(cred):
     auth_URL = 'https://app.hydrawise.com/api/v2/oauth/access-token'
 
 
-    print('\n<<<<<<<<<<<<<< INIT: token request from access-token API  >>>>>>>>>>>>>>>>\n')
+#    print('\n<<<<<<<<<<<<<< INIT: token request from access-token API  >>>>>>>>>>>>>>>>\n')
     r = requests.post(auth_URL, data=cred['api-payload'])
-    print(r.status_code, r.reason, r.text)
+#    print(r.status_code, r.reason, r.text)
     token = json.loads(r.text)
 
-    print('\n<<<<<<<<<<<<<< curl / get token from api >>>>>>>>>>>>>>>>\n')
+#    print('\n<<<<<<<<<<<<<< curl / get token from api >>>>>>>>>>>>>>>>\n')
     cmd = [
     'curl',
     reports_URL,
