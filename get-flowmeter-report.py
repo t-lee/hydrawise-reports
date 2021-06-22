@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 import json
 import time
 import subprocess
@@ -244,7 +245,8 @@ def insert_data(data, db):
 
 if __name__ == "__main__":
 
-    with open("./test-config.json") as json_file:
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    with open("{}/test-config.json".format(dir_path)) as json_file:
         cred = json.load(json_file)
 
     test = False
