@@ -170,7 +170,7 @@ def parse_data(data, cred):
                 print('zone ("{}") / data point ({}):    content of key "y" is not an integer'.format(zone['name'], j))
                 continue
 
-            if not insert_data( ( zoneId, x, runtime, datapoint['y'] ), db ):
+            if not insert_data( ( zoneId, x, x, runtime, datapoint['y'] ), db ):
                 print("failed to write data to database: ({}, {}, {}, {})".format( zoneId, x, runtime, datapoint['y'] ) )
 
     closeDB(db)
@@ -220,8 +220,8 @@ def insert_data(data, db):
 
     add_metric = (
             "INSERT IGNORE INTO hydrawise_flow_meter "
-            "(zone, metric_timestamp, runtime, litres) "
-            "VALUES (%s, %s, %s, %s) "
+            "(zone, metric_timestamp, metric_datetime, runtime, litres) "
+            "VALUES (%s, %s, from_unixtime(%s), %s, %s) "
             )
 
     #print(add_metric)
