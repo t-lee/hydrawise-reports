@@ -245,15 +245,19 @@ def insert_data(data, db):
 
 if __name__ == "__main__":
 
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    with open("{}/test-config.json".format(dir_path)) as json_file:
-        cred = json.load(json_file)
+    try:
+        configfile = sys.argv[1]
+        with open(configfile) as json_file:
+            config = json.load(json_file)
+    except:
+        print("handover a valid config file in json format as argument 1")
+        sys.exit(1)
 
     test = False
     #test = True
 
     if not test:
-        hydrawise_data = get_data(cred['hydrawise'])
+        hydrawise_data = get_data(config['hydrawise'])
     else:
         with open("./test-data.json") as json_file:
             hydrawise_data = json.load(json_file)
@@ -262,4 +266,4 @@ if __name__ == "__main__":
     #print(json.dumps(hydrawise_data, indent=4, sort_keys=True))
     #print('\n^^^^^^^^^^^^^^^^^^^^^^^\n')
 
-    parse_data(hydrawise_data, cred['mysql'])
+    parse_data(hydrawise_data, config['mysql'])
