@@ -1,0 +1,855 @@
+[
+    {
+        "data": [
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1744664399000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1744750799000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1744923600000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1745182799000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1745441999000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1745701198000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1745960398000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1746219599000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1746478797000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1746738000000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1746997200000,
+                "y": 1
+            }
+        ],
+        "name": "8: Antje - Hecke und Zierquitte",
+        "type": "column"
+    },
+    {
+        "data": [
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1744665120000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1744751520000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1744924500000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1745183521000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1745442719000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1745701739000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1745961119000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1746220499000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1746479338000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1746738539000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1746997741000,
+                "y": 0
+            }
+        ],
+        "name": "9: Antje - Wiese hinterm Carport",
+        "type": "column"
+    },
+    {
+        "data": [
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1744665838000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1744752240000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1744925400000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1745184241000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1745443438000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1745702279000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1745961840000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1746221400000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1746479878000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1746739079000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1746998282000,
+                "y": 1
+            }
+        ],
+        "name": "10: Antje - Terasse unteres Beet",
+        "type": "column"
+    },
+    {
+        "data": [
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1744666558000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1744752961000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1744926300000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1745184961000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1745444159000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1745702820000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 12 Minuten",
+                "units": " litres",
+                "x": 1745962559000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1746222300000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1746480418000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1746739619000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 9 Minuten",
+                "units": " litres",
+                "x": 1746998822000,
+                "y": 0
+            }
+        ],
+        "name": "11: Antje - Unteres Beet und Trompete",
+        "type": "column"
+    },
+    {
+        "data": [
+            {
+                "note": "Run time: 30 Minuten",
+                "units": " litres",
+                "x": 1744667278000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 30 Minuten",
+                "units": " litres",
+                "x": 1744753681000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 39 Minuten",
+                "units": " litres",
+                "x": 1744927201000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 30 Minuten",
+                "units": " litres",
+                "x": 1745185682000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 30 Minuten",
+                "units": " litres",
+                "x": 1745444879000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 21 Minuten",
+                "units": " litres",
+                "x": 1745703359000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 30 Minuten",
+                "units": " litres",
+                "x": 1745963280000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 39 Minuten",
+                "units": " litres",
+                "x": 1746223201000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 21 Minuten",
+                "units": " litres",
+                "x": 1746480958000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 21 Minuten",
+                "units": " litres",
+                "x": 1746740159000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 21 Minuten",
+                "units": " litres",
+                "x": 1746999360000,
+                "y": 0
+            }
+        ],
+        "name": "12: Antje - Terasse oberes Beet (Tropfbew\u00e4sserung)",
+        "type": "column"
+    },
+    {
+        "data": [
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1744689600000,
+                "y": 3
+            },
+            {
+                "note": "Run time: 19 Minuten",
+                "units": " litres",
+                "x": 1744862400000,
+                "y": 5
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745208660000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745467200000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745726399000,
+                "y": 3
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1745985601000,
+                "y": 3
+            },
+            {
+                "note": "Run time: 19 Minuten",
+                "units": " litres",
+                "x": 1746159542000,
+                "y": 4
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746417599000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746676799000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746936000000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1747196098000,
+                "y": 2
+            }
+        ],
+        "name": "6: Beet Werkstatt und Hochbeet",
+        "type": "column"
+    },
+    {
+        "data": [
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1744690500000,
+                "y": 4
+            },
+            {
+                "note": "Run time: 19 Minuten",
+                "units": " litres",
+                "x": 1744863539000,
+                "y": 4
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745209321000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745467860000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745727059000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1745986502000,
+                "y": 3
+            },
+            {
+                "note": "Run time: 19 Minuten",
+                "units": " litres",
+                "x": 1746160681000,
+                "y": 4
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746418259000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746677459000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746936660000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1747196998000,
+                "y": 3
+            }
+        ],
+        "name": "7: Beet am Pool",
+        "type": "column"
+    },
+    {
+        "data": [
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1744700400000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 19 Minuten",
+                "units": " litres",
+                "x": 1744873198000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745478000000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745737199000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1745996401000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 19 Minuten",
+                "units": " litres",
+                "x": 1746169201000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746428399000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746687599000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746946801000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1747205998000,
+                "y": 0
+            }
+        ],
+        "name": "2: Rasen vor der Terrasse",
+        "type": "column"
+    },
+    {
+        "data": [
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1744701299000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 19 Minuten",
+                "units": " litres",
+                "x": 1744874339000,
+                "y": 3
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745478660000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745737859000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1745997301000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 19 Minuten",
+                "units": " litres",
+                "x": 1746170342000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746429058000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746688259000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746947460000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1747206897000,
+                "y": 1
+            }
+        ],
+        "name": "3: Beet &amp; Hecke am Eingangsbereich",
+        "type": "column"
+    },
+    {
+        "data": [
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1744702201000,
+                "y": 3
+            },
+            {
+                "note": "Run time: 19 Minuten",
+                "units": " litres",
+                "x": 1744875481000,
+                "y": 4
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745305200000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745564401000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 45 Sekunden",
+                "units": " litres",
+                "x": 1745745239000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1745819976000,
+                "y": 3
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1745823599000,
+                "y": 3
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1746082801000,
+                "y": 3
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746429719000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746688920000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746948121000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 50 Sekunden",
+                "units": " litres",
+                "x": 1747041877000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1747207798000,
+                "y": 3
+            }
+        ],
+        "name": "4: Beet &amp; Hecke am Komposter",
+        "type": "column"
+    },
+    {
+        "data": [
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1744703100000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 19 Minuten",
+                "units": " litres",
+                "x": 1744876620000,
+                "y": 2
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745479320000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745738520000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1745998201000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 19 Minuten",
+                "units": " litres",
+                "x": 1746171481000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746430380000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746689580000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746948781000,
+                "y": 1
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1747208699000,
+                "y": 1
+            }
+        ],
+        "name": "5: Beet: Terrasse, Toilette und Mauer",
+        "type": "column"
+    },
+    {
+        "data": [
+            {
+                "note": "Run time: 1 Minute",
+                "units": " litres",
+                "x": 1744709736000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1744710373000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1744775999000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745207999000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1745553600000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1745899199000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 19 Minuten",
+                "units": " litres",
+                "x": 1746158400000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746504000000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 11 Minuten",
+                "units": " litres",
+                "x": 1746849600000,
+                "y": 0
+            },
+            {
+                "note": "Run time: 15 Minuten",
+                "units": " litres",
+                "x": 1747195199000,
+                "y": 0
+            }
+        ],
+        "name": "1: Rasen vor der T\u00fcr und Romeos Fenster",
+        "type": "column"
+    }
+]
+
