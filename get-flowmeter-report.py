@@ -150,8 +150,10 @@ def parse_data(data, cred):
                 print('zone ("{}") / data point ({}):    content of key "units" is not a string'.format(zone['name'], j))
                 continue
 
+            datapoint['units'] = datapoint['units'].strip()
             if datapoint['units'] != "litres":
                 print('zone ("{}") / data point ({}):    measured unit is not litres'.format(zone['name'], j))
+                print('    reported unit: "{}"'.format(datapoint['units']))
                 continue
 
             ################################################
